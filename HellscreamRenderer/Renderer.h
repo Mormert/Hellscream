@@ -5,7 +5,7 @@
 class Renderer
 {
 public:
-	void Init();
+	void Init(int width, int height, float fovDegree);
 
 	// Render with camera's view matrix
 	void Render(const glm::mat4 &viewMatrix);

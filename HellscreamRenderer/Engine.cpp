@@ -13,7 +13,7 @@ float lastFrame = 0.0f;
 void Engine::Start()
 {
 	renderer = new Renderer();
-	renderWindow = new Window(1200, 1000, "Hellscream", InputManager::ResizeWindowEvent);
+	renderWindow = new Window(2000, 2000, "Hellscream", InputManager::ResizeWindowEvent);
 
 	InputManager::AddResizeWindowCallback(renderer, &Renderer::SetAspectRatio);
 
@@ -22,7 +22,7 @@ void Engine::Start()
 	InputManager::LinkWindow(renderWindow);
 
 	camera = new Camera();
-	renderer->Init();
+	renderer->Init(2000, 2000, 45.0f);
 }
 
 void Engine::Run()
